@@ -5,6 +5,7 @@ import { TransactionHistory } from './TransactionHistory/TransactionHistoryList/
 import dataUser from '../data/user';
 import dataStatistics from '../data/dataStatistics';
 import dataFriends from '../data/friends';
+import transactions from '../data/transactions';
 import { GlobalStyle } from 'components/GlobalStyle';
 export const App = () => (
   <>
@@ -18,6 +19,6 @@ export const App = () => (
     />
     <Statistics title="Upload stats" stats={dataStatistics} />
     <FriendList friends={dataFriends} />
-    <TransactionHistory />
+    <TransactionHistory transactions={transactions} />
   </>
 );

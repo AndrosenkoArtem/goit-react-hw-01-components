@@ -1,7 +1,7 @@
 import { TransactionHistoryItem } from '../TransactionHistoryItem/TransactionHistoryItem';
-import transactions from '../../../data/transactions';
+import PropTypes from 'prop-types';
 import { Container, Th, Tr, Section } from './TransactionHistoryItem.styled';
-export const TransactionHistory = () => (
+export const TransactionHistory = ({ transactions }) => (
   <Section>
     <Container className="transaction-history">
       <thead>
@@ -24,3 +24,8 @@ export const TransactionHistory = () => (
     </Container>
   </Section>
 );
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired
+  ),
+};
